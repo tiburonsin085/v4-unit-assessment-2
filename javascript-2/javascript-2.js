@@ -37,10 +37,17 @@ let foods = [
 
 //CODE HERE
 
-foods.forEach(n => {
-  foods[n]['calories'] = ((foods[n]['carbs']*4)+
-  (foods[n]['protein']*4)+
-  (foods[n]['fat']*9))
+// foods.forEach(n => {
+//   foods[n]['calories'] = ((foods[n]['carbs']*4)+
+//   (foods[n]['protein']*4)+
+//   (foods[n]['fat']*9))
+// })
+
+
+foods.forEach((n,i) => {
+  foods[i]['calories'] = ((foods[i]['carbs']*4)+
+  (foods[i]['protein']*4)+
+  (foods[i]['fat']*9))
 })
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
@@ -88,6 +95,17 @@ const products = [
 
 //CODE HERE
 
+
+// for (let i = 0 ; i < products.length ; i++){
+//   products[i].price *= 0.75
+// }
+var saleProducts = products.map((n,i) => {
+  
+  products[i]['price'] *= 0.75
+  return (n)
+})
+
+
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -98,6 +116,8 @@ const products = [
 
 //CODE HERE
 
+var blueProducts = saleProducts.filter((elem, i) => (products[i].color).includes('blue') === true)
+
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
@@ -106,6 +126,16 @@ const products = [
 */
 
 //CODE HERE
+
+var orderPrices = blueProducts.map((elem,i)=>blueProducts[i]['price'])
+
+
+
+// console.log(orderPrices)
+
+
+var orderTotal = orderPrices.reduce((acc,elem)=>acc+elem)
+
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -137,6 +167,8 @@ const shippingInfo = {
 
 //CODE HERE
 
+var helensInfo = Object.assign({}, contactInfo, shippingInfo)
+
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -146,12 +178,19 @@ const shippingInfo = {
 
 //CODE HERE
 
+var ellensInfo = {...helensInfo}
+
+ellensInfo.name = 'Ellen'
+ellensInfo.email = 'ellen@email.com'
+
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
+
+const {email} = ellensInfo  
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -160,6 +199,9 @@ const shippingInfo = {
 */
 
 //CODE HERE
+
+const {zipCode, state} = shippingInfo
+
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
@@ -223,6 +265,8 @@ const userInfo = {
 
 //CODE HERE
 
+
+var shouldAlert = userInfo.settings.alerts
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -231,6 +275,8 @@ const userInfo = {
 
 //CODE HERE
 
+var topic = userInfo.topics[3]
+
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -238,6 +284,8 @@ const userInfo = {
 */
 
 //CODE HERE
+
+var commenterId = userInfo.comments[1].responses[0].userId
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -257,6 +305,30 @@ const userInfo = {
 */
 
 //CODE HERE
+
+
+const person ={
+  name:'esteban',
+  age: 25,
+  jobs: ['engineer', 'web developer', 'the bboss'],
+  birthday: function(){
+    return this.age += 1
+  },
+  favorites: {
+    color:'red',
+    number:13,
+    book:"it s a secret"},
+  kids:[
+      {name:'jeffrey',
+      age: 6
+      },
+      {name:'jeffrey',
+      age: 6
+      }
+
+    ]
+  
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -282,7 +354,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -295,6 +367,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+let context2 = window
 //let context2 = global
 //let context2 = workout
