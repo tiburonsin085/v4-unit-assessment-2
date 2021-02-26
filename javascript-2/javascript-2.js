@@ -37,6 +37,12 @@ let foods = [
 
 //CODE HERE
 
+foods.forEach(n => {
+  foods[n]['calories'] = ((foods[n]['carbs']*4)+
+  (foods[n]['protein']*4)+
+  (foods[n]['fat']*9))
+})
+
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
