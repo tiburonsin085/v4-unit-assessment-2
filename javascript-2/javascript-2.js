@@ -45,9 +45,13 @@ let foods = [
 
 
 foods.forEach((n,i) => {
-  foods[i]['calories'] = ((foods[i]['carbs']*4)+
-  (foods[i]['protein']*4)+
-  (foods[i]['fat']*9))
+  foods[i]['calories'] = 
+  (
+    (foods[i]['carbs']*4) +
+    (foods[i]['protein']*4) +
+    (foods[i]['fat']*9)
+    
+    )
 })
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
@@ -127,14 +131,13 @@ var blueProducts = saleProducts.filter((elem, i) => (products[i].color).includes
 
 //CODE HERE
 
-var orderPrices = blueProducts.map((elem,i)=>blueProducts[i]['price'])
 
 
 
 // console.log(orderPrices)
 
 
-var orderTotal = orderPrices.reduce((acc,elem)=>acc+elem)
+var orderTotal = blueProducts.reduce((acc,curr)=>  acc+curr.price,0 )
 
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
