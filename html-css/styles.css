@@ -12,3 +12,197 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+
+.top-header{
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    z-index: 1;
+
+}
+.dev-name{
+    color :rgb(42, 171, 226);
+    margin-left: 2vw;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2vw;
+}
+
+.header-list{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    justify-content: space-around;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.5vw;
+
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+   
+    position: relative;
+    top: 10vh;
+}
+.first-section{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.text{
+    width: 50vw;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 20px;
+}
+
+#profile-default{
+    height: 20vh;
+
+}
+#name{
+    font-weight: bolder;
+}
+
+.titles{
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    
+}
+.paragraph{
+   margin:20px;
+   line-height: 25px;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 30vw;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    
+
+}
+
+.profile-up{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 25vh;
+    justify-content: space-between;
+    width: 15vw;
+    padding: 10px;
+    box-shadow: 0px 0px 60px 0px rgba(102, 75, 75, .3);
+    border-radius: 10px;
+    
+}
+.popular-articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    font-size: 15px;
+    width: 15vw;
+    padding: 10px;
+    box-shadow: 0px 0px 60px 0px rgba(102, 75, 75, .3);
+    border-radius: 10px;
+}
+
+ol{
+    list-style-type:decimal;
+}
+li{
+    margin: 12px;
+    
+}
+h3{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.gallery{
+    width: 50vw;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 20px;
+    margin-left: 4vw;
+    height: 60vh;
+}
+.gallery-head{
+    
+    height:10vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#gallery-tittle{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#view-larger{
+    position: relative;
+    top:20px;
+    color: rgb(42, 171, 226);
+}
+
+.images-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.images{
+    width: 12vw;
+    margin:1vw;
+}
+footer{
+    background-color:rgb(42, 171, 226) ;
+    color: black;
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: relative;
+    top: 50px;
+
+}
+
+.footer-tittle{
+    margin: 20px;
+}
+.question{
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+    border-radius: 30px;
+    border: 3px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(42, 171, 226);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
